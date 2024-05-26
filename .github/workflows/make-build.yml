@@ -43,14 +43,14 @@ jobs:
         run: sudo mkdir /buildroot
 
       - name: Clone buildroot repository
-        run: git clone --depth 1 --branch 2024.02.2 https://github.com/buildroot/buildroot.git /buildroot
+        run: sudo git clone --depth 1 --branch 2024.02.2 https://github.com/buildroot/buildroot.git /buildroot
 
       - name: Copy buildroot config
-        run: cp ./buildroot-src/.config /buildroot/.config
+        run: sudo cp ./buildroot-src/.config /buildroot/.config
 
       - name: buildroot make all
         working-directory: /buildroot
-        run: make all
+        run: sudo make all
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
