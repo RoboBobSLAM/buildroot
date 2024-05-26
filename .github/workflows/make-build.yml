@@ -40,7 +40,7 @@ jobs:
             git
 
       - name: Create buildroot directory
-        run: mkdir /buildroot
+        run: sudo mkdir /buildroot
 
       - name: Clone buildroot repository
         run: git clone --depth 1 --branch 2024.02.2 https://github.com/buildroot/buildroot.git /buildroot
