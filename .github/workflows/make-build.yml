@@ -52,6 +52,9 @@ jobs:
         working-directory: /buildroot
         run: sudo make all
 
+      - name: set permissions
+        run: sudo chmod -R 777 /buildroot/output
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
