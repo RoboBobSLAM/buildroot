@@ -59,4 +59,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: buildroot-output
-          path: /buildroot/output
+          path: /buildroot/output/images
